@@ -4,7 +4,7 @@ CollectionExtensions
 CollectionExtensions is an dll/ assembly that contains useful extensions to Lists, Dictionaries and ObservableCollections.
 The assembly was written and tested in .Net 4.6.2.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/0p2unbxcfge97f84?svg=true)](https://ci.appveyor.com/project/SeppPenner/512kbchecker)
+[![Build status](https://ci.appveyor.com/api/projects/status/x2rink65wav91ap0?svg=true)](https://ci.appveyor.com/project/SeppPenner/collectionextensions)
 
 
 ## Basic usage:
@@ -125,7 +125,7 @@ namespace ExampleUsage
 }
 ```
 
-An example project therefore can be found [here](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject).
+An example project therefore can be found [here](https://github.com/SeppPenner/CollectionExtensions/blob/master/ExampleUsage/Program.cs).
 
 Change history
 --------------
