@@ -13,6 +13,11 @@ namespace CollectionExtensions
                 dictionary.Add(key, value);
         }
 
+        public static Dictionary<TKey, TValue> Clone<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
+        {
+            return dictionary.ToDictionary(val => val.Key, val => val.Value);
+        }
+
         public static void DeleteIfExistsKey<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key)
         {
             CheckDictionaryIsNull(dictionary);

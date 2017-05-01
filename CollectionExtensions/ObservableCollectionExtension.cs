@@ -6,6 +6,14 @@ namespace CollectionExtensions
 {
     public static class ObservableCollectionExtension
     {
+        public static ObservableCollection<T> Clone<T>(this ObservableCollection<T> collection)
+        {
+            var collectionToReturn = new ObservableCollection<T>();
+            foreach (var val in collection)
+                collectionToReturn.Add(val);
+            return collectionToReturn;
+        }
+
         public static void AddIfNotExists<T>(this ObservableCollection<T> collection, T value)
         {
             CheckObservableCollectionIsNull(collection);

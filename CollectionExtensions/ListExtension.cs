@@ -6,6 +6,11 @@ namespace CollectionExtensions
 {
     public static class ListExtension
     {
+        public static List<T> Clone<T>(this List<T> list)
+        {
+            return list.ToList();
+        }
+
         public static void AddIfNotExists<T>(this List<T> list, T value)
         {
             CheckListIsNull(list);

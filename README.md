@@ -130,4 +130,5 @@ An example project therefore can be found [here](https://github.com/SeppPenner/C
 Change history
 --------------
 
+* **Version 1.0.0.1 (2017-05-01)** : Added cloning option.
 * **Version 1.0.0.0 (2017-03-11)** : 1.0 release.
