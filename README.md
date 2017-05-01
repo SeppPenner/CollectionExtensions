@@ -47,6 +47,11 @@ namespace ExampleUsage
             PrintDictionaryToConsole(dictionary);
             Print(dictionary.AreKeysEmpty());
             Print(dictionary.AreValuesEmpty());
+            var dict1 = new Dictionary<string, string>();
+            var dict2 = dict1.Clone();
+            dict2.Add("1", "1");
+            PrintDictionaryToConsole(dict1);
+            PrintDictionaryToConsole(dict2);
         }
 
         private static void TestObservableCollection()
@@ -65,6 +70,11 @@ namespace ExampleUsage
             observableCollection.DeleteIfExists("c");
             PrintObservableCollectionToConsole(observableCollection);
             Print(observableCollection.AreValuesEmpty());
+            var observableCollection1 = new ObservableCollection<string>();
+            var observableCollection2 = observableCollection1.Clone();
+            observableCollection2.Add("Abc");
+            PrintObservableCollectionToConsole(observableCollection1);
+            PrintObservableCollectionToConsole(observableCollection2);
         }
 
         private static void TestList()
@@ -83,6 +93,11 @@ namespace ExampleUsage
             list.DeleteIfExists("c");
             PrintListToConsole(list);
             Print(list.AreValuesEmpty());
+            var list1 = new List<string>();
+            var list2 = list1.Clone();
+            list2.Add("Abc");
+            PrintListToConsole(list1);
+            PrintListToConsole(list2);
         }
 
         private static void PrintObservableCollectionToConsole(ObservableCollection<string> collection)
