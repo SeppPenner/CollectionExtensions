@@ -2,9 +2,14 @@ CollectionExtensions
 ====================================
 
 CollectionExtensions is an dll/ assembly that contains useful extensions to Lists, Dictionaries and ObservableCollections.
-The assembly was written and tested in .Net 4.7.
+The assembly was written and tested in .Net 4.8.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x2rink65wav91ap0?svg=true)](https://ci.appveyor.com/project/SeppPenner/collectionextensions)
+[![GitHub issues](https://img.shields.io/github/issues/SeppPenner/CollectionExtensions.svg)](https://github.com/SeppPenner/CollectionExtensions/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SeppPenner/CollectionExtensions.svg)](https://github.com/SeppPenner/CollectionExtensions/network)
+[![GitHub stars](https://img.shields.io/github/stars/SeppPenner/CollectionExtensions.svg)](https://github.com/SeppPenner/CollectionExtensions/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/CollectionExtensions/master/License.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/CollectionExtensions/badge.svg)](https://snyk.io/test/github/SeppPenner/CollectionExtensions)
 
 
 ## Basic usage:
@@ -145,5 +150,6 @@ An example project therefore can be found [here](https://github.com/SeppPenner/C
 Change history
 --------------
 
+* **Version 1.0.0.2 (2019-05-06)** : Updated .Net version to 4.8.
 * **Version 1.0.0.1 (2017-05-01)** : Added cloning option.
 * **Version 1.0.0.0 (2017-03-11)** : 1.0 release.
