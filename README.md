@@ -2,7 +2,7 @@ CollectionExtensions
 ====================================
 
 CollectionExtensions is an dll/ assembly that contains useful extensions to Lists, Dictionaries and ObservableCollections.
-The assembly was written and tested in .Net 4.8.
+The assembly was written and tested in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x2rink65wav91ap0?svg=true)](https://ci.appveyor.com/project/SeppPenner/collectionextensions)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/CollectionExtensions.svg)](https://github.com/SeppPenner/CollectionExtensions/issues)
@@ -108,31 +108,53 @@ namespace ExampleUsage
         private static void PrintObservableCollectionToConsole(ObservableCollection<string> collection)
         {
             if (!collection.Any())
+            {
                 Console.WriteLine("Empty collection");
+            }
             else
+            {
                 foreach (var value in collection)
+                {
                     Console.WriteLine(value);
+                }
+            }
+
             Console.WriteLine("-------------------------------------");
         }
 
         private static void PrintListToConsole(IEnumerable<string> list)
         {
             var enumerable = list as string[] ?? list.ToArray();
+
             if (!enumerable.Any())
+            {
                 Console.WriteLine("Empty list");
+            }
             else
+            {
                 foreach (var value in enumerable)
+                {
                     Console.WriteLine(value);
+                }
+            }
+                    
             Console.WriteLine("-------------------------------------");
         }
 
         private static void PrintDictionaryToConsole(Dictionary<string, string> dictionary)
         {
             if (dictionary.Count == 0)
+            {
                 Console.WriteLine("Empty dictionary");
+            } 
             else
+            {
                 foreach (var pair in dictionary)
+                {
                     Console.WriteLine(pair.Key + ":" + pair.Value);
+                }
+            }
+            
             Console.WriteLine("-------------------------------------");
         }
 
@@ -150,7 +172,4 @@ An example project therefore can be found [here](https://github.com/SeppPenner/C
 Change history
 --------------
 
-* **Version 1.0.1.0 (2019-10-27)** : Updated nuget packages, added GitVersionTask.
-* **Version 1.0.0.2 (2019-05-06)** : Updated .Net version to 4.8.
-* **Version 1.0.0.1 (2017-05-01)** : Added cloning option.
-* **Version 1.0.0.0 (2017-03-11)** : 1.0 release.
+See the [Changelog](https://github.com/SeppPenner/CollectionExtensions/blob/master/Changelog.md).
