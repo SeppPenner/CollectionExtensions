@@ -12,7 +12,7 @@ The assembly was written and tested in .Net 5.0.
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/CollectionExtensions/badge.svg)](https://snyk.io/test/github/SeppPenner/CollectionExtensions)
 
 
-## Basic usage:
+## Basic usage
 ```csharp
 using System;
 using System.Collections.Generic;
