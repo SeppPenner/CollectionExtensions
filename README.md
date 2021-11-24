@@ -2,7 +2,6 @@ CollectionExtensions
 ====================================
 
 CollectionExtensions is an dll/ assembly that contains useful extensions to Lists, Dictionaries and ObservableCollections.
-The assembly was written and tested in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x2rink65wav91ap0?svg=true)](https://ci.appveyor.com/project/SeppPenner/collectionextensions)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/CollectionExtensions.svg)](https://github.com/SeppPenner/CollectionExtensions/issues)
