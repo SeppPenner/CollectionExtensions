@@ -148,7 +148,7 @@ namespace CollectionExtensions
         /// <param name="dictionary">The dictionary.</param>
         /// <param name="value">The value.</param>
         /// <returns>The found key.</returns>
-        private static TKey GetKeyFromValue<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TValue value)
+        private static TKey? GetKeyFromValue<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TValue value)
         {
             var keys = new List<TKey>();
 
@@ -169,9 +169,13 @@ namespace CollectionExtensions
         /// <param name="keys">The keys.</param>
         /// <param name="pair">The key value pair.</param>
         /// <param name="value">The value.</param>
-        // ReSharper disable once UseDeconstructionOnParameter
         private static void AddToKeysList<TKey, TValue>(ICollection<TKey> keys, KeyValuePair<TKey, TValue> pair, TValue value)
         {
+            if (pair.Value is null)
+            {
+                return;
+            }
+
             if (pair.Value.Equals(value))
             {
                 keys.Add(pair.Key);
@@ -184,8 +188,6 @@ namespace CollectionExtensions
         /// <typeparam name="TValue">The value value type.</typeparam>
         /// <param name="count">The count.</param>
         /// <param name="value">The value.</param>
-        // ReSharper disable EntityNameCapturedOnly.Local
-        // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckCountGreaterZero<TValue>(int count, TValue value)
         {
             if (count <= 0)
@@ -205,10 +207,9 @@ namespace CollectionExtensions
         /// <typeparam name="TKey">The key value type.</typeparam>
         /// <typeparam name="TValue">The value value type.</typeparam>
         /// <param name="dictionary">The dictionary.</param>
-        // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckDictionaryIsNull<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
         {
-            if (dictionary == null)
+            if (dictionary is null)
             {
                 throw new ArgumentNullException(nameof(dictionary));
             }
@@ -220,7 +221,6 @@ namespace CollectionExtensions
         /// <typeparam name="TKey">The key type.</typeparam>
         /// <typeparam name="TValue">The value type.</typeparam>
         /// <param name="pair">The key value pair.</param>
-        // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckKeyValuePairIsNull<TKey, TValue>(KeyValuePair<TKey, TValue> pair)
         {
             if (pair.Key == null || pair.Value == null)
@@ -236,8 +236,6 @@ namespace CollectionExtensions
         /// <typeparam name="TValue">The value type.</typeparam>
         /// <param name="key">The key.</param>
         /// <param name="value">The value.</param>
-        // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
-        // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckKeyValuePairIsNull<TKey, TValue>(TKey key, TValue value)
         {
             if (key == null)

@@ -112,7 +112,6 @@ namespace CollectionExtensions
         /// </summary>
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="value">The value.</param>
-        // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckValueIsNull<T>(T value)
         {
             if (value == null)
@@ -126,7 +125,6 @@ namespace CollectionExtensions
         /// </summary>
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="collection">The collection.</param>
-        // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckObservableCollectionIsNull<T>(this ObservableCollection<T> collection)
         {
             if (collection == null)

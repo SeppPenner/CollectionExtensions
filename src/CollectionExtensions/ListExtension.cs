@@ -106,7 +106,6 @@ namespace CollectionExtensions
         /// </summary>
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="value">The value.</param>
-        // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckValueIsNull<T>(T value)
         {
             if (value == null)
@@ -120,7 +119,6 @@ namespace CollectionExtensions
         /// </summary>
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="list">The list.</param>
-        // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckListIsNull<T>(this IList<T> list)
         {
             if (list == null)
